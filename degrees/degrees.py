@@ -64,7 +64,7 @@ def main():
     if source is None:
         sys.exit("Person not found.")    
     
-    target = person_id_for_name("Kevin Bacon")
+    target = person_id_for_name("Jennifer Lawrence")
     #target = person_id_for_name(input("Name: "))    
     if target is None:
         sys.exit("Person not found.")        
@@ -108,7 +108,7 @@ def shortest_path(source, target):
         for neighbour in neighbours:         
             if neighbour[1] not in exploredSet:
                 if not frontier.contains_state(neighbour[1]):
-                    print(neighbour)   
+                    #print(neighbour)   
                     intermediateNode = Node(state=neighbour[1],parent=node,action=neighbour[0]);
                     frontier.add(intermediateNode)
 
